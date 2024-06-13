@@ -1,0 +1,9 @@
+app = "workers"
+kill_signal = "SIGINT"
+primary_region = "otp"
+kill_timeout = 5
+[experimental]
+  auto_rollback = true
+[processes]
+  beat = "celery -A auto beat -l INFO"
+  worker_1 = "celery -A auto worker --loglevel=info --concurrency=3 -n concurrency_3"

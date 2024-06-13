@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% include 'header.html' %}
+<main>
+  <div class="hero_area">
+    {% block content %}
+
+      <!-- one section -->
+
+      <section class="one_section">
+        <div class="container">
+          <div class="left_images">
+            <div class="one-background-img">
+              <img class="image-map" src="{% static 'app/images/index-one-block-1.png' %}" alt="one image">
+            </div>
+          </div>
+          <div class="right_content">
+            <div class="one-info">
+              <h2>{% trans "ninja taxi" %}</h2>
+              <p class="phone"><i class="fas fa-phone"></i> +38(093) 753 10 57</p>
+              <p class="text-1">{% trans "Довірте свій автопарк та" %}<br>{% trans "інвестиції безпечному" %}<br>{% trans "партнеру NINJA TAXI" %}
+              </p>
+              <div class="contact-me-btn" id="open-form">
+                <button class="free-access-button">{% trans "Зв’яжіться зі мною" %}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end one section -->
+
+      <!-- about section -->
+
+      <section class="about_section layout_padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 row-detail-box">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <h2>{% trans "Що таке Ninja Taxi?" %}</h2>
+                </div>
+                <p class="about-section">
+                  {% trans "NINJA TAXI - ваш партнер для збільшення доходу в таксі. " %}
+                  {% trans "Ми розробляємо автоматизовану систему для ефективного управління автопарком, зменшуючи витрати. " %}
+                  {% trans "Наша мета - популяризувати екологічний транспорт в Україні, пропонуючи вигідні умови інвестування " %}
+                  {% trans "в китайські електрокари. Ми також розвиваємо мережу зарядних станцій для зручного заряджання. " %}
+                  {% trans "Ninja Taxi допомагає вашому бізнесу зростати, мінімізуючи ризики." %}
+              </div>
+            </div>
+            <div class="col-md-6 row-detail-img">
+              <div class="img-box">
+                <img src="{% static 'app/images/index-two-block-1.png' %}" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end about section -->
+
+      <!-- investment section -->
+
+      <div class="common-background"
+           style="background-image: url('{% static 'app/images/index-block-background.webp' %}');">
+        <section class="investment-section-index layout_padding">
+          <div class="container">
+            <div class="heading_container">
+              <h2>{% trans "Інвестиція в екологічне майбутнє" %}</h2>
+              <p class="investment">
+                {% trans "Здайте свій електрокар в оренду або інвестуйте гроші в електро-таксі та отримуйте " %}
+                {% trans "пасивний дохід від 14 000 грн щомісячно з кожного авто." %}
+              </p>
+              <div class="button-container">
+                <a href="{% url 'investment' %}" class="btn btn-primary">{% trans "Дізнатися більше" %}</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="video-box">
+                  <img class="img-1" src="{% static 'app/images/price-img/price-block-4.png' %}" alt="" loading="lazy">
+                  <a data-youtube href="https://www.youtube.com/watch?v=GCf8iURnec8"
+                     title="Натисніть для запуску відео"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- end investment section -->
+
+        <!-- automation for vehicle fleets section -->
+
+        <section class="automation-section-index layout_padding">
+          <div class="container">
+            <div class="block">
+              <div class="automation-img">
+                <img src="{% static 'app/images/automation-1.png' %}" alt="" loading="lazy">
+              </div>
+              <div class="block-detail">
+                <h2>{% trans "Переверніть свій автопарк на 180 градусів" %}</h2>
+                <p>
+                  {% trans "Збільшуйте прибуток свого таксопарку з автоматизованою системою від NINJA TAXI, " %}
+                  {% trans "мінімізуючи витрати та ризики" %}
+                </p>
+                <a href="{% url 'auto-park' %}" class="button">{% trans "Дізнатися більше" %}</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- end automation for vehicle fleets section -->
+
+      <!-- refueling section -->
+
+      <section class="refueling-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 row-detail-box">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <h2>{% trans "Ninja Зарядні станції" %}</h2>
+                </div>
+                <p class="about-section">
+                  {% trans "- це швидкий, зручний та екологічно чистий спосіб заряджати ваш електромобіль. " %}<br>
+                  {% trans "З NINJA TAXI ви можете рухатися вперед у майбутнє без зайвих затримок. " %}
+                </p>
+              </div>
+              <a href="{% url 'charging_stations' %}">
+                <button class="btn-read-more">{% trans "Читати більше" %}</button>
+              </a>
+            </div>
+            <div class="col-md-6 row-detail-img">
+              <div class="img-box">
+                <img src="{% static 'app/images/index-three-block-1.png' %}" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end refueling section -->
+      <div id="subscribeModalForm"></div>
+      {% include '_contact-me-form.html' %}
+      {% include '_thank-you-message.html' %}
+      {% include '_existing-you-message.html' %}
+      <!-- end client section -->
+    {% endblock %}
+  </div>
+</main>
+{% include 'footer.html' %}
+
+<script>
+	let sentryCdn = "{{ sentry_cdn }}";
+	let ajaxPostUrl = "{% url 'post_request' %}";
+	let ajaxGetUrl = "{% url 'get_request' %}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://accounts.google.com/gsi/client" defer></script>
+<script src="{% static 'app/js/jquery.mask.min.js' %}" defer></script>
+<script src="{% static 'app/js/cookies.js' %}?v={{ build_id }}" defer></script>
+<script src="{% static 'app/js/custom.js' %}?v={{ build_id }}" defer></script>
+
+<script type="text/javascript">
+	(function (d, w, s) {
+		let widgetHash = 'nyn8tk2xlz378e7n7kd3', gcw = d.createElement(s);
+		gcw.type = 'text/javascript';
+		gcw.async = true;
+		gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js';
+		let sn = d.getElementsByTagName(s)[0];
+		sn.parentNode.insertBefore(gcw, sn);
+	})(document, window, 'script');
+</script>
+
+</body>
+</html>

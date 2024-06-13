@@ -1,0 +1,284 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+<!-- investment section -->
+{% block content %}
+  <section class="investment_section">
+    <div class="container">
+      <div class="investment-left">
+        <img class="invest-img" src="{% static 'app/images/invest-img/invest-block-1.png' %}" alt="one image">
+      </div>
+      <div class="investment-right">
+        <div class="decorate-img">
+          <img src="{% static 'app/images/index-one-block-3.webp' %}" alt="three image">
+          <div class="invest-one-info">
+            <h2>{% trans "Інвестуйте в екологічне майбутнє" %}</h2>
+            <p class="invest-text-1">
+              {% trans "Здайте свій електрокар в оренду або інвестуйте гроші в електро-таксі " %}
+              {% trans "та отримуйте пасивний дохід від 14 000 грн щомісячно з кожного авто." %}
+            </p>
+          </div>
+        </div>
+        <div class="invest-btn-box">
+          <button class="free-access-button invest-btn">{% trans "Інвестувати" %}</button>
+          <button class="how-does-it-work-btn">{% trans "Як це працює?" %}</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end investment section -->
+
+  <!-- investment two section -->
+  <section class="investment-two-section">
+    <div class="how-does-it-work">
+      <h2 class="title-how-does-it">{% trans "Як це працює?  " %}</h2>
+      <p class="description-how-does-it">
+        {% trans "NINJA TAXI - Ваш надійний партнер, який буде з вами на кожному кроці, починаючи з першого дня. " %}
+        {% trans "Ми забезпечимо вас усім необхідним та станемо на допомогу у вирішенні будь-яких питань. " %}
+        {% trans "Наш підхід - це не просто надання послуги, a партнерство, спрямоване на масштабування вашого бізнесу." %}
+      </p>
+      <button class="free-access-button invest-btn">{% trans "Інвестувати" %}</button>
+    </div>
+    <div class="investment-cards-container">
+      <div class="investment-cards">
+        <div class="investment-card">
+          <h2>01</h2>
+          <span class="cart-description">{% trans "Ми знаходимо та допомагаємо придбати електрокар" %}</span>
+        </div>
+        <div class="investment-card">
+          <h2>02</h2>
+          <span class="cart-description">{% trans "Обладнуємо та готуємо до роботи електрокар" %}</span>
+        </div>
+        <div class="investment-card">
+          <h2>03</h2>
+          <span class="cart-description">{% trans "Шукаємо водія та запускаємо електрокар в роботу" %}</span>
+        </div>
+        <div class="investment-card">
+          <h2>04</h2>
+          <span class="cart-description">{% trans "Контролюємо роботу та обслуговуємо електрокар" %}</span>
+        </div>
+        <div class="investment-card">
+          <h2>05</h2>
+          <span class="cart-description">{% trans "Щотижня виплачуємо дохідність та надаємо звітність" %}</span>
+        </div>
+        <div class="investment-card">
+          <h2>06</h2>
+          <span class="cart-description">{% trans "Допомагаємо маштабувати Ваш  електробізнес" %}</span>
+        </div>
+      </div>
+    </div>
+    <button class="free-access-button invest-btn">{% trans "Інвестувати" %}</button>
+  </section>
+
+  <!-- end investment two section -->
+
+  <!-- investment three section -->
+
+  <section class="investment-three-section">
+    <div class="container">
+      <div class="why-us-title">
+        <h2>{% trans "Чому саме NINJA TAXI? " %}</h2>
+      </div>
+      <section class="splide investment-slider" aria-label="">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="why-us-card">
+                <div class="container-card">
+                  <img src="{% static 'app/images/invest-img/invest-block-3-1.png' %}" alt="">
+                  <h3 class="title-card">{% trans "Почніть з 1 електрокара" %}</h3>
+                  <p class="description-card">
+                    {% trans "Навіть якщо ви розпочинаєте з одним електрокаром, " %}
+                    {% trans "ми готові підтримати вас. Це важливо зазначити, оскільки багато " %}
+                    {% trans "автопарків реєструються лише при наявності мінімум 5 машин." %}
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="why-us-card">
+                <div class="container-card">
+                  <img src="{% static 'app/images/invest-img/invest-block-3-2.png' %}" alt="">
+                  <h3 class="title-card">{% trans "Спільні цілі" %}</h3>
+                  <p class="description-card">
+                    {% trans "Наші цілі з вами однакові - заробляти разом та забезпечувати ріст бізнесу, " %}
+                    {% trans "тому ми спрямовані на досягнення найвищої ефективності флоту елктрокара" %}
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="why-us-card">
+                <div class="container-card">
+                  <img src="{% static 'app/images/invest-img/invest-block-3-3.png' %}" alt="">
+                  <h3 class="title-card">{% trans "Інфраструктура" %}</h3>
+                  <p class="description-card">
+                    {% trans "Ми гарантуємо належне функціонування важливої інфраструктури, зокрема, " %}
+                    {% trans "швидких зарядних станцій для вашого електрокара, зі знижкою 50%." %}
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="why-us-card">
+                <div class="container-card">
+                  <img src="{% static 'app/images/invest-img/invest-block-3-4.png' %}" alt="">
+                  <h3 class="title-card">{% trans "Ефективне управління" %}</h3>
+                  <p class="description-card">
+                    {% trans "Ми організовуємо роботу з усіма основними агрегаторами, такими як UBER, UKLON та BOLT, " %}
+                    {% trans "за принципом 'єдиної платформи'." %}
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="box-btn">
+        <button class="free-access-button invest-btn">{% trans "Інвестувати" %}</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- end investment three section -->
+
+  <!-- investment four section -->
+
+  <section class="investment-four-section">
+    <div class="container">
+      <div class="potential-income">
+        <h2 class="title-potential-income">
+          {% trans "Оцініть потенційний дохід з вашого електрокара з нашою допомогою!" %}
+        </h2>
+        <p class="description-potential-income">
+          {% trans "Залиште свою заявку, і ми проаналізуємо ваші дані, " %}
+          {% trans "щоб надати вам конкретний розрахунок доходу з вашого електрокара." %}
+        </p>
+      </div>
+      <div class="potential-income-box-form">
+        <form>
+          <div class="client-info">
+            <label for="client-city">{% trans "Місто" %}</label>
+            <input type="text" id="client-city" name="client-city" placeholder="Вкажіть ваше місто" required>
+            <span class="client-error-city error-message"
+                  style="color: red; display: none;">{% trans "Це поле обов'язкове" %}</span>
+          </div>
+
+          <div class="client-info">
+            <label for="client-name">{% trans "Ім’я" %}</label>
+            <input type="text" id="client-name" name="client-name" placeholder="Ваше ім’я" required>
+            <span class="client-error-name error-message"
+                  style="color: red; display: none;">{% trans "Це поле обов'язкове" %}</span>
+          </div>
+
+          <div class="client-info">
+            <label for="client-vehicle">{% trans "Марка та модель" %}</label>
+            <input type="text" id="client-vehicle" name="client-vehicle"
+                   placeholder="Модель та марка вашого електрокара " required>
+            <span class="client-error-vehicle error-message"
+                  style="color: red; display: none;">{% trans "Це поле обов'язкове" %}</span>
+          </div>
+
+          <div class="client-info">
+            <label for="client-year">{% trans "Рік" %}</label>
+            <input type="text" id="client-year" name="client-year" placeholder="Рік випуску вашого електрокара"
+                   required>
+            <span class="client-error-year error-message"
+                  style="color: red; display: none;">{% trans "Це поле обов'язкове" %}</span>
+          </div>
+
+          <div class="client-info">
+            <label for="client-phone">{% trans "Номер телефону:" %}</label>
+            <input type="tel" id="client-phone" name="client-phone" placeholder="(###) ### - ## - ##" required>
+            <span class="client-error-phone error-message"
+                  style="color: red; display: none;">{% trans "Це поле обов'язкове" %}</span>
+          </div>
+          <div class="box-btn">
+            <button class="cost-calculation invest-btn">{% trans "Проконсультуватися" %}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- end investment four section -->
+
+  <!-- investment five section -->
+
+  <section class="investment-five-section">
+    <div class="container">
+      <div class="asked-questions-container">
+        <h2 class="asked-questions-title">
+          {% trans "Часті запитання" %}
+        </h2>
+        <div class="question">
+          <h3 class="question-title">{% trans "Яка кількість автомобілів потрібна для реєстрації автопарку?" %}
+            <svg width="33" height="49" viewBox="0 0 33 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 24.5L0 48.3157L0 0.684301L33 24.5Z" fill="#53785E"></path>
+            </svg>
+          </h3>
+          <p class="answer">
+            {% trans "Зазвичай реєстрація автопарку вимагає мінімум 5 автомобілів, " %}
+            {% trans "що належать одному власнику. Однак ми надаємо можливість розпочати з 1 автомобіля, " %}
+            {% trans "що дозволяє вам переконатися у його ефективності з мінімальним вхідним порогом." %}
+          </p>
+        </div>
+        <div class="question">
+          <h3 class="question-title">{% trans "Кому належить автомобіль?" %}
+            <svg width="33" height="49" viewBox="0 0 33 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 24.5L0 48.3157L0 0.684301L33 24.5Z" fill="#53785E"></path>
+            </svg>
+          </h3>
+          <p class="answer">
+            {% trans "Автомобілі, придбані для роботи, реєструються на інвестора, що означає, " %}
+            {% trans "що ви завжди контролюєте свій актив." %}
+          </p>
+        </div>
+        <div class="question">
+          <h3 class="question-title">{% trans "Як я можу керувати бізнесом?" %}
+            <svg width="33" height="49" viewBox="0 0 33 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 24.5L0 48.3157L0 0.684301L33 24.5Z" fill="#53785E"></path>
+            </svg>
+          </h3>
+          <p class="answer">
+            {% trans "Ви отримаєте доступ до застосунку власника автопарку, де зможете контролювати всю " %}
+            {% trans "фінансову активність вашого бізнесу. Звітність за будь-який період дозволить вам " %}
+            {% trans "тримати руку на пульсі та контролювати все онлайн, включаючи місцезнаходження водіїв. " %}
+            {% trans "У Автоматизованій системі від NINJA TAXI ви зможете переглянути операційну активність автопарку." %}
+          </p>
+        </div>
+        <div class="question">
+          <h3 class="question-title">{% trans "Чи можна отримувати прибуток як ФОП або ТОВ?" %}
+            <svg width="33" height="49" viewBox="0 0 33 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 24.5L0 48.3157L0 0.684301L33 24.5Z" fill="#53785E"></path>
+            </svg>
+          </h3>
+          <p class="answer">
+            {% trans "Так, ми розуміємо, наскільки важливо продемонструвати високий рівень прибутку для " %}
+            {% trans "отримання кредитування та розвитку вашого бізнесу. Ми готові допомогти вам знайти " %}
+            {% trans "будь-який спосіб отримання прибутку від співпраці з нами." %}
+          </p>
+        </div>
+        <div class="question">
+          <h3 class="question-title">{% trans "Яка прибутковість такого бізнесу?" %}
+            <svg width="33" height="49" viewBox="0 0 33 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 24.5L0 48.3157L0 0.684301L33 24.5Z" fill="#53785E"></path>
+            </svg>
+          </h3>
+          <p class="answer">
+            {% trans "При оцінці прибутковості ми враховуємо кілька факторів, таких як початкова вартість, " %}
+            {% trans "модель бізнесу та наявність брендування. Особистий розрахунок можна отримати від " %}
+            {% trans "вашого персонального менеджера з розвитку автопарку. Наші партнери зазвичай очікують " %}
+            {% trans "окупності протягом 24-36 місяців, в залежності від регіону." %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include '_auto-park-section.html' %}
+  {% include '_thank-you-message.html' %}
+  {% include '_existing-you-message.html' %}
+
+  <div id="subscribeModalForm"></div>
+{% endblock %}

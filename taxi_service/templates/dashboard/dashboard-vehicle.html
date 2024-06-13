@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% include 'dashboard/dashboard-header-sidebar.html' %}
+<!-- Content -->
+<main class="main-container">
+  <div class="main-title">
+    <h2>{% trans 'Автомобілі' %}</h2>
+  </div>
+  {% include 'dashboard/filter.html' %}
+  {% include 'dashboard/datepicker.html' %}
+  <div class="payback-car"></div>
+</main>
+</div>
+
+<script src="{% static 'dashboard/js/scripts-vehicle.js' %}?v={{ build_id }}" defer></script>
+</body>
+</html>
